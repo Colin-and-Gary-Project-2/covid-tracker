@@ -74,30 +74,25 @@ App.showData = (data) => {
       const totalTestedHTML = `
         <div>${userData.total_tests}</div> 
         `;
-      const totalVaccinationHTML = `
-        <div>${userData.total_vaccinations}</div> 
+      const totalRecoveryHTML = `
+        <div>${userData.total_recoveries}</div> 
         `;
-        const testResultsHTML = `
-        <div>TEST</div> 
+      const partialVaccinatedHTML = `
+        <div>${userData.total_vaccines_distributed}</div> 
         `;
-                const testResults2HTML = `
-        <div>TEST2</div> 
-        `;
-                const testResults3HTML = `
-        <div>TEST3</div> 
+      const fullVaccinatedHTML = `
+        <div>${userData.total_vaccinated}</div> 
         `;
       const totalVaccCase = document.querySelector(".total-cases-results");
       const totalTested = document.querySelector(".total-tested-results");
-      const totalVaccination = document.querySelector(".total-vaccine-results");
-      const testResults = document.querySelector(".test-results");
-      const testResults2 = document.querySelector(".test-results2");
-      const testResults3 = document.querySelector(".test-results3");
+      const totalRecovery = document.querySelector(".total-recovery-results");
+      const partialVaccinated = document.querySelector(".partial-vaccine-results");
+      const fullVaccinated = document.querySelector(".full-vaccine-results");
       totalVaccCase.innerHTML = caseHtml;
       totalTested.innerHTML = totalTestedHTML;
-      totalVaccination.innerHTML = totalVaccinationHTML;
-      testResults.innerHTML = testResultsHTML;
-            testResults2.innerHTML = testResults2HTML;
-                  testResults3.innerHTML = testResults3HTML;
+      totalRecovery.innerHTML = totalRecoveryHTML;
+      partialVaccinated.innerHTML = partialVaccinatedHTML;
+      fullVaccinated.innerHTML = fullVaccinatedHTML;
     });
   });
   // const loop = data.data.forEach((province) => {
