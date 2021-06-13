@@ -96,30 +96,57 @@ body {
 
 .results-left {
 width: 50%;
-          border: 2px solid purple;
+          // border: 2px solid purple;
 }
 
 .total-cases {
-  border: 1px solid blue;
-  align-items: flex-end;
+  // border: 1px solid blue;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
-  // height: 100%;
+  height: 20%;
 }
 
 .selection-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  // height: 100%;
+  height: 80%;
   width: 100%;
-  border: 1px solid green;
+  // border: 1px solid green;
 }
 
 .results-right {
-  width: 40%;
-            border: 2px solid orange;
+  width: 45%;
+  height: 100%;
+            // border: 2px solid orange;
 }
 
+.total-cases-results {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  // border: 2px solid black;
+}
+
+.selected-container-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  // border: 2px solid black;
+}
+
+.total-tested-results,
+.total-vaccine-results,
+.test-results,
+.test-results2,
+.test-results3 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 
   
   

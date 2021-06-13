@@ -339,15 +339,20 @@ form {
 
 .results-left {
   width: 50%;
-  border: 2px solid purple;
 }
 
 .total-cases {
-  border: 1px solid blue;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  height: 20%;
 }
 
 .selection-container {
@@ -361,13 +366,51 @@ form {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  height: 80%;
   width: 100%;
-  border: 1px solid green;
 }
 
 .results-right {
-  width: 40%;
-  border: 2px solid orange;
+  width: 45%;
+  height: 100%;
+}
+
+.total-cases-results {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selected-container-results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80%;
+}
+
+.total-tested-results,
+.total-vaccine-results,
+.test-results,
+.test-results2,
+.test-results3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 /* BUTTON*/

@@ -69,23 +69,35 @@ App.showData = (data) => {
       e.preventDefault();
       // console.log(userData);
       const caseHtml = `
-        <h2>Total Cases</h2>
         <div>${userData.total_cases}</div>
         `;
       const totalTestedHTML = `
-        <h2>Total tested</h2>
         <div>${userData.total_tests}</div> 
         `;
       const totalVaccinationHTML = `
-        <h2>Total Vaccinations</h2>
         <div>${userData.total_vaccinations}</div> 
         `;
-      const totalVaccCase = document.querySelector(".total-cases");
-      const totalTested = document.querySelector(".total-tested");
-      const totalVaccination = document.querySelector(".total-vaccine");
+        const testResultsHTML = `
+        <div>TEST</div> 
+        `;
+                const testResults2HTML = `
+        <div>TEST2</div> 
+        `;
+                const testResults3HTML = `
+        <div>TEST3</div> 
+        `;
+      const totalVaccCase = document.querySelector(".total-cases-results");
+      const totalTested = document.querySelector(".total-tested-results");
+      const totalVaccination = document.querySelector(".total-vaccine-results");
+      const testResults = document.querySelector(".test-results");
+      const testResults2 = document.querySelector(".test-results2");
+      const testResults3 = document.querySelector(".test-results3");
       totalVaccCase.innerHTML = caseHtml;
       totalTested.innerHTML = totalTestedHTML;
       totalVaccination.innerHTML = totalVaccinationHTML;
+      testResults.innerHTML = testResultsHTML;
+            testResults2.innerHTML = testResults2HTML;
+                  testResults3.innerHTML = testResults3HTML;
     });
   });
   // const loop = data.data.forEach((province) => {
