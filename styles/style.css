@@ -254,7 +254,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Ek Mukta", sans-serif;
 }
 
@@ -266,7 +266,7 @@ h1 {
   font-weight: 800;
   color: #e3e2df;
   margin: 0;
-  padding-top: 150px;
+  padding-top: 100px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
 }
 
@@ -467,6 +467,8 @@ form {
   text-align: center;
   outline: none;
   width: 100%;
+  position: relative;
+  top: -5px;
 }
 
 .btn-optn2:hover {
