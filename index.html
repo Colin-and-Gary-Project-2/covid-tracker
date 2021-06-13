@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Total Vaccinations</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span class="covid">COVID-19</span> <span class="vacc">Vaccinations TRACKER</span>
+        </h1>
+
+
+        <div class="errorMessage"></div>
+
+
+        <div class="form-flex">
+            <form class="search-form" id="search-form">
+                <label for="provinceChoice" class="sr-only">What province are you in?</label>
+                <select name="provinceChoice" id="provinceChoice" defaultValue="noInput">
+                    <option value='noInput' disabled selected>Select Province</option>
+                    <option value="AB">Alberta</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="ON">Ontario</option>
+                    <option value="PE">PEI</option>
+                    <option value="QC">Quebec</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="YT">Yukon</option>
+                </select>
+                <div class="btn-optn">
+                    <button type="submit" class="btn-optn2">Get Results</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="results-container">
+            <div class="total-cases">
+                <h2>Total Cases</h2>
+            </div>
+            <div class="selection-container">
+                <div class="total-tested">
+                    <h2>Total tested</h2>
+                </div>
+                <div class="total-vaccine">
+                    <h2>Total Vaccinations</h2>
+                </div>
+                <div class="total-cases">
+                    <h2>Total Cases</h2>
+                </div>
+                <div class="total-tested">
+                    <h2>Total tested</h2>
+                </div>
+                <div class="total-vaccine">
+                    <h2>Total Vaccinations</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
