@@ -6,7 +6,7 @@ App.apiCall = function () {
   // Retrieve API data
   async function getAPIData() {
     const apiURL = "https://api.covid19tracker.ca/summary/split/";
-    const url = new URL("http://proxy.hackeryou.com");
+    const url = new URL("https://proxy.hackeryou.com");
     url.search = new URLSearchParams({
       reqUrl: apiURL,
     });
