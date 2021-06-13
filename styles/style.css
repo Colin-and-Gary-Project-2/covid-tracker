@@ -293,58 +293,6 @@ form {
   width: 18rem;
 }
 
-.results-container {
-  background-color: #E8A87C;
-  height: 70%;
-  width: 85%;
-  border: 5px solid #E67260;
-  border-radius: 20px;
-  padding: 30px;
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 50px;
-}
-
-.selection-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 85%;
-  width: 100%;
-}
-
-.submit-button {
-  text-align: center;
-  width: 100%;
-  display: inline-block;
-}
-
-.total-cases, .total-tested, .total-vaccine {
-  position: relative;
-  width: 30%;
-  height: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .form-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,6 +312,62 @@ form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.submit-button {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.results-container {
+  background-color: #E8A87C;
+  height: 70%;
+  width: 50%;
+  border: 5px solid #E67260;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.results-left {
+  width: 50%;
+  border: 2px solid purple;
+}
+
+.total-cases {
+  border: 1px solid blue;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+}
+
+.selection-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  border: 1px solid green;
+}
+
+.results-right {
+  width: 40%;
+  border: 2px solid orange;
 }
 
 /* BUTTON*/
