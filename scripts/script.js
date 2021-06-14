@@ -52,8 +52,8 @@ App.showData = (data) => {
   // WHENEVER USER SELECTS(CHANGES) PROVINCE VALUE, THEN RUN THIS CODE.
   province.addEventListener("change", (event) => {
     // console.log("Working Yet?")
-    // console.log(event.originalTarget.value);
-    let userInput = event.originalTarget.value;
+    console.log(event.currentTarget.value);
+    let userInput = event.currentTarget.value;
     // console.log(data);
     let userData = {};
 
