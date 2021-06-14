@@ -1,28 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Total Vaccinations</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Covid Tracker App</title>
 </head>
+
 <body>
-    
-        <h1>COVID-19 Total Vaccinations</h1>
-        
-        
-        <h2>By Province</h2>
-        <form action="" id="search-form">
-            <label for="province">Select Province</label>
-            <select name="province" id="provinces"></select>
-        
-            <button type="submit">Search</button>
-        </form>
-        
+
+    <header>
+
+        <h1><span class="covid">COVID-19</span> <span class="vacc">Vaccinations TRACKER</span></h1>
+
         <!-- Rendered results from JS -->
-        <div id="results"></div>
+        <div id="results-div">Results Render Here?</div>
+
+
+        <div class="api-container">
+
+            <div class="selection-container">
+
+                <div class="total-cases">
+                    <h2>Total Cases</h2>
+                    <div class="form-flex">
+                        <form class="search-form" id="search-form">
+                            <input class="chosen-value" type="text" value="" placeholder="Select Province">
+                            <ul class="value-list">
+                                <li>Alberta</li>
+                                <li>British Columbia</li>
+                                <li>New Brunswick</li>
+                                <li>Newfoundland and Labrador</li>
+                                <li>Northwest Territories</li>
+                                <li>Nova Scotia</li>
+                                <li>Nunavut</li>
+                                <li>Manitoba</li>
+                                <li>Ontario</li>
+                                <li>PEI</li>
+                                <li>Quebec</li>
+                                <li>Saskatchewan</li>
+                                <li>Yukon</li>
+                            </ul>
+                            <div class="btn-optn"><button type="submit" class="button">Get Results</button></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="partially-vaccinated">
+                    <h2>Partially Vaccinated</h2>
+                    <div class="form-flex">
+                        <form class="search-form" id="search-form2">
+                            <input class="chosen-value" type="text" value="" placeholder="Select Province">
+                            <ul class="value-list">
+                                <li>Alberta</li>
+                                <li>British Columbia</li>
+                                <li>New Brunswick</li>
+                                <li>Newfoundland and Labrador</li>
+                                <li>Northwest Territories</li>
+                                <li>Nova Scotia</li>
+                                <li>Nunavut</li>
+                                <li>Manitoba</li>
+                                <li>Ontario</li>
+                                <li>PEI</li>
+                                <li>Quebec</li>
+                                <li>Saskatchewan</li>
+                                <li>Yukon</li>
+                            </ul>
+                            <div class="btn-optn">
+                                <div class="middle">
+                                    <!-- <input type="submit" class="btn btn1"> -->
+                                    <a href="" class="btn btn1">Get Results</a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="fully-vaccinated">
+                    <h2>Fully Vaccinated</h2>
+                    <div class="form-flex">
+                        <form class="search-form" id="search-form3">
+                            <input class="chosen-value" type="text" value="" placeholder="Select Province">
+                            <ul class="value-list">
+                                <li>Alberta</li>
+                                <li>British Columbia</li>
+                                <li>New Brunswick</li>
+                                <li>Newfoundland and Labrador</li>
+                                <li>Northwest Territories</li>
+                                <li>Nova Scotia</li>
+                                <li>Nunavut</li>
+                                <li>Manitoba</li>
+                                <li>Ontario</li>
+                                <li>PEI</li>
+                                <li>Quebec</li>
+                                <li>Saskatchewan</li>
+                                <li>Yukon</li>
+                            </ul>
+                            <div class="btn-optn">
+                                <button type="submit" class="btn-optn2">Get Results</button>
+                            </div>
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        
+
+        <!-- MORE BUTTONS -->
+
+
+
+    </header>
+
+
 
     <script src="./scripts/script.js"></script>
+
 </body>
+
 </html>
