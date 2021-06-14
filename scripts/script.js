@@ -1,7 +1,9 @@
 const App = {};
+
 App.init = function () {
   App.apiCall();
 };
+
 App.apiCall = function () {
   // Retrieve API data
   async function getAPIData() {
@@ -14,8 +16,6 @@ App.apiCall = function () {
     if (response) {
       const jsonData = await response.json();
       return jsonData.data;
-    } else {
-      console.log(error);
     }
   }
   // Promise to grab API data
@@ -29,54 +29,48 @@ App.apiCall = function () {
     });
 };
 
-// MVP branch
-
-
-
-//ADD ERROR MESSAGE IF USER DOESN'T SELECT PROVINCE.
 App.showData = (data) => {
   const form = document.querySelector("#search-form");
   const province = document.querySelector("#provinceChoice");
-  if (province.value === "noInput") {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const errorMessage = document.querySelector(".errorMessage");
-      errorMessage.innerHTML = "<p>Please select province</p>";
-    });
-  }
-
-
+  const errorMessage = document.querySelector(".errorMessage");
   // WHENEVER USER SELECTS(CHANGES) PROVINCE VALUE, THEN RUN THIS CODE.
   province.addEventListener("change", (event) => {
     let userInput = event.currentTarget.value;
-    let userData = {};
-
     //GO THRU ARRAY, COMPARING EACH data.province value to USER SELECTED VALUE
     for (let i = 0; i < data.length; i++) {
       if (data[i].province === userInput) {
         userData = data[i];
       }
     }
-  
-
     //ON FORM SUBMIT AFTER USER SELECTS PROVINCE, THEN RENDER RESULTS.
+  });
+  if (province.value === "noInput") {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      errorMessage.innerHTML = "Please select province";
+    });
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (province.value !== "noInput") {
+      errorMessage.innerHTML = "";
+    }
+    if (userData) {
       const caseHtml = `
-        <div>${userData.total_cases}</div>
-        `;
+      <div>${userData.total_cases}</div>
+      `;
       const totalTestedHTML = `
-        <div>${userData.total_tests}</div> 
-        `;
+      <div>${userData.total_tests}</div> 
+      `;
       const totalRecoveryHTML = `
-        <div>${userData.total_recoveries}</div> 
-        `;
+      <div>${userData.total_recoveries}</div> 
+      `;
       const partialVaccinatedHTML = `
-        <div>${userData.total_vaccines_distributed}</div> 
-        `;
+      <div>${userData.total_vaccines_distributed}</div> 
+      `;
       const fullVaccinatedHTML = `
-        <div>${userData.total_vaccinated}</div> 
-        `;
+      <div>${userData.total_vaccinated}</div> 
+      `;
       const totalVaccCase = document.querySelector(".total-cases-results");
       const totalTested = document.querySelector(".total-tested-results");
       const totalRecovery = document.querySelector(".total-recovery-results");
@@ -87,12 +81,12 @@ App.showData = (data) => {
       totalRecovery.innerHTML = totalRecoveryHTML;
       partialVaccinated.innerHTML = partialVaccinatedHTML;
       fullVaccinated.innerHTML = fullVaccinatedHTML;
-    });
+    }
   });
 };
 
 App.apiError = () =>{
-  // if API doesn't retrieve data, display message
+  // if API doesn't retrieve data, display error message
   const errorDiv = document.querySelector(".errorMessage");
   const apiErrorMessage = "<p>Error Retrieving Data. Try Again Later!</p>"
   errorDiv.innerHTML = apiErrorMessage;
