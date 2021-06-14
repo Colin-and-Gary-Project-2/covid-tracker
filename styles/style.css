@@ -307,6 +307,40 @@ select {
   margin-right: 30px;
 }
 
+.errorMessage {
+  font-size: 1.5rem;
+  color: red;
+  font-style: italic;
+  position: relative;
+  font-weight: 400;
+  height: 55px;
+  top: 60px;
+  font-family: "Ek Mukta", sans-serif;
+}
+
+.far, .fa-hand-point-down {
+  font-size: 3rem;
+  padding-right: 20px;
+  color: #e67260;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000;
+}
+
+.blink-me {
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 form {
   height: 150px;
 }
