@@ -47,7 +47,7 @@ App.showData = (data) => {
   if (province.value === "noInput") {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      errorMessage.innerHTML = `<i class="far fa-hand-point-down blink-me"></i>Please select a Province below`;
+      errorMessage.innerHTML = `<i class="far fa-hand-point-down blink-me"></i>Please select a <b>PROVINCE</b> below`;
     });
   }
   form.addEventListener("submit", (e) => {
