@@ -1,18 +1,23 @@
 body {
   font-family: "Ek Mukta", sans-serif;
+  background-color: #e3e2df;
 }
 
 header {
-  background-color: #e3e2df;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   font-family: "Ek Mukta", sans-serif;
 }
 
+.wrapper {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 h1 {
   font-size: 3rem;
@@ -22,7 +27,7 @@ h1 {
   font-weight: 800;
   color: #e3e2df;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 50px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     2px 2px 0 #000;
 }
@@ -34,6 +39,7 @@ h1 {
 .vacc {
   text-shadow: -1px -1px 0 #e67260, 1px -1px 0 #e67260, -1px 2px 0 #e67260,
     2px 2px 0 #e67260;
+  color: #f3c6a8;
 }
 
 h2,
@@ -67,6 +73,36 @@ select {
   margin-right: 30px;
 }
 
+.errorMessage {
+  font-size: 1.5rem;
+  color: red;
+  font-style: italic;
+  position: relative;
+  font-weight: 400;
+  height: 55px;
+  top: 60px;
+  font-family: "Ek Mukta", sans-serif;
+  text-shadow: 0px 0px 0 #000, 0px 0px 0 #000, -1px 1px 0 #000;
+}
+
+.far,
+.fa-hand-point-down {
+  font-size: 3rem;
+  padding-right: 20px;
+  color: #e67260;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000;
+}
+
+.blink-me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 form {
   height: 150px;
 }
@@ -78,7 +114,7 @@ form {
   align-items: center;
   position: relative;
   border-radius: 20px;
-  width: 600px;
+  width: 700px;
   top: 70px;
   border: 5px solid #e67260;
 }
@@ -99,7 +135,8 @@ form {
 .results-container {
   background-color: #f3c6a8;
   height: 500px;
-  width: 50%;
+  max-width: 80%;
+  min-width: 70%;
   border: 5px solid #e67260;
   border-radius: 20px;
   padding: 90px 30px 30px;
@@ -126,8 +163,8 @@ form {
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-height: 80%;
-justify-content: space-around;
+  height: 80%;
+  justify-content: space-around;
 }
 
 .results-right {
@@ -144,18 +181,17 @@ justify-content: space-around;
   color: #e67260;
   letter-spacing: 1.5px;
   font-weight: 800;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    2px 2px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
 }
 
 .selected-container-results {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #86d876;
   height: 80%;
-  text-shadow: -0.2px -0.2px 0 #000, 0.2px -0.2px 0 #000, -0.2px 0.2px 0 #000,
+  text-shadow: -0.4px -0.4px 0 #000, 0.4px -0.4px 0 #000, -0.4px 0.4px 0 #000,
     0.5px 0.5px 0 #000;
 }
 
@@ -207,42 +243,94 @@ justify-content: space-around;
 
 @media (max-width: 1200px) {
   header {
-    height: 100%;
+    height: 100vh;
   }
 
   h2 {
-    padding: 40px 0;
+    margin: auto 0;
   }
 
   .btn-optn {
     position: relative;
-    top: -25px;
+    top: 0px;
   }
 
-  results-container {
+  .results-container {
     display: flex;
     margin-top: 0;
-    width: 70%;
   }
   .selection-container {
     flex-direction: column;
     align-items: center;
-    height: 100%;
     padding: 0;
     width: 100%;
   }
 
   .total-cases,
-  .total-tested,
-  .total-vaccine {
-    position: relative;
+  .selection-container {
+    display: flex;
     width: 100%;
-    height: 30%;
-    margin: 30px 0;
-    justify-content: space-between;
+    align-items: flex-end;
   }
 
   .form-flex {
-    top: 20px;
+    top: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .results-container {
+    width: 85%;
+  }
+
+  .results-left {
+    width: 70%;
+    text-align: right;
+  }
+  .results-right {
+    width: 25%;
+  }
+
+  .total-cases-results {
+    font-size: 1.5rem;
+
+    letter-spacing: 1.2px;
+    font-weight: 400;
+  }
+
+  .total-tested-results,
+  .total-recovery-results,
+  .partial-vaccine-results,
+  .full-vaccine-results {
+    letter-spacing: 1.2px;
+    font-size: 1.2rem;
+  }
+
+  .form-flex {
+    top: 75px;
+    flex-direction: column-reverse;
+    width: 330px;
+  }
+  .btn-optn2 {
+    margin: 20px 0;
+  }
+
+  .errorMessage {
+    font-size: 1rem;
+  }
+
+  input,
+  select {
+    height: 50%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
