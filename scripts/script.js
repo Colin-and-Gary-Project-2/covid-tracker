@@ -41,7 +41,7 @@ App.showData = (data) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const errorMessage = document.querySelector(".errorMessage");
-      errorMessage.innerHTML = "Please select province";
+      errorMessage.innerHTML = "<p>Please select province</p>";
     });
   }
 
@@ -93,9 +93,9 @@ App.showData = (data) => {
 
 App.apiError = () =>{
   // if API doesn't retrieve data, display message
-  const totalVaccCase = document.querySelector(".total-cases-results");
-  const apiErrorMessage = "<div>Error Retrieving Data. Try Again Later!</div>"
-  totalVaccCase.innerHTML = apiErrorMessage;
+  const errorDiv = document.querySelector(".errorMessage");
+  const apiErrorMessage = "<p>Error Retrieving Data. Try Again Later!</p>"
+  errorDiv.innerHTML = apiErrorMessage;
 }
 App.init();
 
